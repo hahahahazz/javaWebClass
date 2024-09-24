@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<!-- GET방식으로 처리 (기본값) : 주로 서버의 정보를 얻어올 때 사용한다( 위치: 요청header, 보인다.)
+POST방식으로 처리 : 서버에 정보를 새롭게 반영하거나 삭제 , 변경해야 하는 경우에 사용한다. 
+ (위치: 요청body, 보이지 않음 , 길이의제한이 없고 텍스트 및 바이너리가능) :  파일업로드시 필수 -->
+
+<h2>Post 방식 호출은 1가지 방법만 있다. form 태그 이용</h2>
+<form action="/day03/hi" method="post">
+<button> 버튼 </button>
+</form>
+
+
+<h2>  form 태그  POST 요청시 값 전달 - 요청바디에 포함된다.  url 에 보이지 않는다. </h2>
+<!-- 사용자에게 대량의 데이터를 보내는경우 	로그인은 짧지만 그런 정보들을 보낼때는 post를 쓴다 . -->
+<form action="/day03/hi"  method="post"> 
+	<input type ="text" name="su">
+	<button> 그냥 누르면 su 없이 뜨고 su입력하면 뒤에 su가 뜰꺼야  </button>
+</form>
+
+
+<h2> doPost 호출한 서블릿 </h2>
+<a href= "/day03/hiPost"> 안녕 Post!</a>
+</body>
+</html>
