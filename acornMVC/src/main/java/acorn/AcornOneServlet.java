@@ -17,6 +17,9 @@ public class AcornOneServlet  extends HttpServlet{
 		
 		
 		String id  =request.getParameter("id");
+
+		
+		
 		
 		AcornService service  = new AcornService();
 		Acorn acorn =service.getMember(id);		

@@ -18,7 +18,7 @@ public class AcornDelete extends HttpServlet {
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
 	String id = req.getParameter("id");
-	System.out.println(id);
+	//System.out.println(id);
 	
 	AcornService service = new AcornService();
 	service.deleteMember(id);

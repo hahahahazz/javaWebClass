@@ -47,6 +47,7 @@ public class AcornService {
 		dao.delete(id);
 	}
 	
+	//회원정보수정
 	public  void modifyMember( String id, String newpw) {
 		dao.update(id, newpw);
 	}

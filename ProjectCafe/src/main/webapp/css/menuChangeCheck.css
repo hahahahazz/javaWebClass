@@ -1,0 +1,82 @@
+@charset "UTF-8";
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column; /* 세로 방향으로 정렬 */
+    min-height: 100vh; /* 최소 높이 설정 */
+}
+
+header {
+    background-color: #00704a;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.edit-menu {
+    flex: 1; /* 남은 공간을 차지 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* 세로 방향으로 정렬 */
+}
+
+.table-title {
+    margin-bottom: 20px; /* 테이블과 제목 사이 간격 */
+    text-align: center; /* 중앙 정렬 */
+}
+
+.menu-table {
+    margin: 0 auto; /* 중앙 정렬을 위해 자동 마진 */
+    border-collapse: collapse;
+    width: 300px; /* 테이블 너비 */
+    background-color: white; /* 테이블 배경색 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.menu-table td, .menu-table th {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.menu-table tr:nth-child(even) {
+    background-color: #f9f9f9; /* 짝수 행 배경색 */
+}
+
+button {
+    background-color: #00704a;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #005f3b;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #00704a;
+    color: white;
+}
