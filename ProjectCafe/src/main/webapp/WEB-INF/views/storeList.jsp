@@ -19,16 +19,16 @@
                 <li><a href="/ProjectCafe/MenuList">메뉴 관리</a></li>
                 <li><a href="/ProjectCafe/cusList">고객 관리</a></li>
                 <li><a href="/ProjectCafe/StoreList">지점 관리</a></li>
-                <li><a href="#">로그인 </a></li>
+                <li><a href="/ProjectCafe/login">로그인 </a></li>
                 <li><a href="/ProjectCafe/signUp">회원가입</a></li>
             </ul>
         </nav>
     </header>
    <main>
         <section class="menu-list">
-<table>
-<h2>매장 목록</h2>
-    <table>
+        <h2>매장 목록</h2>
+<table  class="menu-table">
+
       <thead>
         <tr>
           <th>매장 아이디</th>
@@ -41,7 +41,7 @@
  <tbody>
 
 <% ArrayList<Store> list = (ArrayList<Store>)request.getAttribute("list"); 
-for(Store store:list){%>
+for(Store store:list){ %>
 
 <tr>
 <td><%=store.getStore_id()%></td>
@@ -54,8 +54,12 @@ for(Store store:list){%>
 </td>
 </tr>
 <%} %>
-
+</tbody>
 </table>
-
+</section>
+</main>
+    <footer>
+        <p>&copy; 2024 SUK TA BUCK SU. 모든 권리 보유.</p>
+    </footer>
 </body>
 </html>

@@ -19,7 +19,7 @@
                 <li><a href="/ProjectCafe/MenuList">메뉴 관리</a></li>
                 <li><a href="/ProjectCafe/cusList">고객 관리</a></li>
                 <li><a href="/ProjectCafe/StoreList">지점 관리</a></li>
-                <li><a href="#">로그인 </a></li>
+                <li><a href="/ProjectCafe/login">로그인 </a></li>
                 <li><a href="/ProjectCafe/signUp">회원가입</a></li>
             </ul>
         </nav>
@@ -27,20 +27,21 @@
    <main>
         <section class="menu-list">
             <h2>메뉴 목록</h2>
-            <table>
+            <div class="menu-button">
+  <button><a href="/ProjectCafe/menuReg">메뉴 추가</a></button>
+            </div>
+            
+            <table  class="menu-table">
                 <thead>
                     <tr>
                         <th>아이디</th>
                         <th>메뉴명</th>
                         <th>가격</th>
                         <th>적립 포인트</th>
-                        <th>변경</th>
-                        <th>삭제</th>
+                        <th>변경 / 삭제</th>
                     </tr>
                 </thead>
                 <tbody>
-<button><a href="/ProjectCafe/menuReg">메뉴 추가</a></button>
-
 
 
 <% ArrayList<CafeMenu> list = (ArrayList<CafeMenu>)request.getAttribute("list");
@@ -52,7 +53,7 @@ for(CafeMenu menu:list){ %>
 <td><%= menu.getMenu_price() %></td>
 <td><%= menu.getMenu_point() %></td>
 <td>
-	<a href="/ProjectCafe/menu?menu_id=<%=menu.getMenu_id()%>">변경</a>
+	<a href="/ProjectCafe/menu?menu_id=<%=menu.getMenu_id()%>">변경</a> /
 	<a href="/ProjectCafe/DeleteMenu?menu_id=<%=menu.getMenu_id()%>">삭제</a>
 </td>
 </tr>
@@ -62,7 +63,7 @@ for(CafeMenu menu:list){ %>
 </section>
     </main>
     <footer>
-        <p>&copy; 2024 스타벅스. 모든 권리 보유.</p>
+        <p>&copy; 2024 SUK TA BUCK SU. 모든 권리 보유.</p>
     </footer>
 </body>
 </html>

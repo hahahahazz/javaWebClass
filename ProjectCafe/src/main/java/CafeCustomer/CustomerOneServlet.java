@@ -20,7 +20,7 @@ public class CustomerOneServlet extends HttpServlet{
 	Customer customer = service.getMember(id);
 	req.setAttribute("customer", customer);
 	
-	req.getRequestDispatcher("WEB-INF/views/member.jsp").forward(req, resp);
+	req.getRequestDispatcher("WEB-INF/views/cus_member.jsp").forward(req, resp);
 	
 	
 	

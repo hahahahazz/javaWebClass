@@ -18,6 +18,6 @@ public class hi extends HttpServlet{
 		String su = req.getParameter("su");
 	
 		PrintWriter out = resp.getWriter();
-		out.println("HIHI Servlet"+su);
+		out.println("HIHI Servlet / "+su);
 	}
 }

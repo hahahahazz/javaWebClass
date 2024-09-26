@@ -4,10 +4,13 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column; /* 세로 방향으로 정렬 */
+    min-height: 100vh; /* 최소 높이 설정 */
 }
 
 header {
-    background-color: #00704a;
+    background-color: #00704a; 
     color: white;
     padding: 20px;
     text-align: center;
@@ -32,38 +35,52 @@ nav ul li a {
     text-decoration: none;
 }
 
+nav ul li a:hover {
+    text-decoration: underline; /* 호버 시 밑줄 추가 */
+}
 .menu-list {
-    padding: 20px;
+    flex: 1; /* 남은 공간을 차지 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* 세로 방향으로 정렬 */
+  	margin-bottom: 100px;
 }
 
-table {
-    width: 100%;
+.menu-button{
     border-collapse: collapse;
+    width: 1000px; /* 테이블 너비 */
+	text-align: right;
+	margin-bottom: 10px;
+}
+.menu-list a {
+    color: #00704a; /* 메뉴 리스트 링크 색상 */
+    text-decoration: none;
 }
 
-th, td {
+.menu-list a:hover {
+    text-decoration: underline; /* 호버 시 밑줄 추가 */
+}
+
+.menu-table {
+    margin: 0 auto; /* 중앙 정렬을 위해 자동 마진 */
+    border-collapse: collapse;
+    width: 1000px; /* 테이블 너비 */
+    background-color: white; /* 테이블 배경색 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.menu-table td, .menu-table th {
     padding: 10px;
     text-align: left;
-    border-bottom: 1px solid #ddd;
+    border: 1px solid #ddd;
 }
 
-th {
-    background-color: #00704a;
-    color: white;
+.menu-table tr:nth-child(even) {
+    background-color: #f9f9f9; /* 짝수 행 배경색 */
 }
 
-.edit-button, .delete-button {
-    background-color: #00704a;
-    color: white;
-    border: none;
-    padding: 8px 12px;
-    cursor: pointer;
-    border-radius: 4px;
-}
 
-.edit-button:hover, .delete-button:hover {
-    background-color: #005f3b;
-}
 
 footer {
     text-align: center;

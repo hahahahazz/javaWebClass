@@ -41,8 +41,6 @@ public class DBTest {
 			rs  =pst.executeQuery();
 			
 			
-		
-			
 			while( rs.next()) {  //rs => 한 행(레코드) 데이가 있음 
 				String id  = rs.getString(1);
 				String pw  = rs.getString(2);

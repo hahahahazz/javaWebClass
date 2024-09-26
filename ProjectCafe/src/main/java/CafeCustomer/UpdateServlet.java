@@ -17,13 +17,16 @@ public class UpdateServlet extends HttpServlet{
 		req.setCharacterEncoding("UTF-8");
 		
 		
-		String id = req.getParameter("customer_id");
-		String name = req.getParameter("customer_name");
-		String tell = req.getParameter("customer_tell");
-		String birth = req.getParameter("customer_birth");
-		String point = req.getParameter("customer_point");
+		String id = req.getParameter("id");
+		String name = req.getParameter("name");
+		String tell = req.getParameter("tell");
+		String birth = req.getParameter("birth");
+		String point = req.getParameter("point");
 		
-		Customer cus = new Customer(id, name, tell, birth,point);
+		
+		Customer cus = new Customer(id, name, tell, birth, point);
+		
+		System.out.println(cus);
 		
 		CustomerService service = new CustomerService();
 		//service.modifyMember(id, name, tell, birth, point);

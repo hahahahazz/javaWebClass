@@ -16,18 +16,22 @@
                 <li><a href="/ProjectCafe/MenuList">메뉴 관리</a></li>
                 <li><a href="/ProjectCafe/cusList">고객 관리</a></li>
                 <li><a href="/ProjectCafe/StoreList">지점 관리</a></li>
-                <li><a href="#">로그인 </a></li>
+                <li><a href="/ProjectCafe/login">로그인 </a></li>
                 <li><a href="/ProjectCafe/signUp">회원가입</a></li>
             </ul>
         </nav>
     </header>
     <main>
+    <section class="edit-menu">
+    
+    <h2><strong>메뉴정보</strong></h2>
+    
+    
 <% CafeMenu menu = (CafeMenu)request.getAttribute("Menu"); %>
 
-<h2>메뉴정보</h2>
 <form name="frm" action="/ProjectCafe/MenuUpdate" method="post">
 
-<table class="menu-table" style="margin: auto;">
+<table class="menu-table" >
 
 <tr>
 <td>메뉴 아이디</td>
@@ -50,14 +54,15 @@
 </tr>
 
 <tr>
-<td codspan="2"><button>등록</button></td>
+<td colspan="2"><button>등록</button></td>
 </tr>
 
 </table>
 </form>
+</section>
 </main>
-<footer>
-        <p>&copy; 2024 스타벅스. 모든 권리 보유.</p>
+    <footer>
+        <p>&copy; 2024 SUK TA BUCK SU. 모든 권리 보유.</p>
     </footer>
 </body>
 </html>

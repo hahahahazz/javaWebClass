@@ -28,7 +28,7 @@ public class CustomerServlet extends HttpServlet{
 		//MODEL저장
 		req.setAttribute("list", list);
 	
-		req.getRequestDispatcher("WEB-INF/views/list.jsp").forward(req, resp);
+		req.getRequestDispatcher("WEB-INF/views/cus_list.jsp").forward(req, resp);
 	
 	
 	}

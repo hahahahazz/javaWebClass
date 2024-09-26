@@ -19,18 +19,18 @@
                 <li><a href="/ProjectCafe/MenuList">메뉴 관리</a></li>
                 <li><a href="/ProjectCafe/cusList">고객 관리</a></li>
  				<li><a href="/ProjectCafe/StoreList">지점 관리</a></li>
-                 <li><a href="#">로그인 </a></li>
+                <li><a href="/ProjectCafe/login">로그인 </a></li>
                 <li><a href="/ProjectCafe/signUp">회원가입</a></li>
             </ul>
         </nav>
     </header>
    <main>
         <section class="menu-list">
-
-<table>
-
-<caption>숙타벅수 고객 목록</caption>
-
+ <h2>SUK TA BUK SU 고객 목록</h2>
+             <div class="menu-button">
+  <button><a href="/ProjectCafe/signUp"> 고객 추가 </a></button>
+            </div>
+<table  class="menu-table">
 
  <thead>
 <tr>
@@ -44,7 +44,6 @@
 
 </thead>
 <tbody>
-<button><a href="/ProjectCafe/signUp"> 고객 추가 </a></button>
 
 <% ArrayList<Customer> list = (ArrayList<Customer>)request.getAttribute("list"); 
 	for(Customer cus : list){
@@ -65,7 +64,7 @@
 </section>
     </main>
     <footer>
-        <p>&copy; 2024 스타벅스. 모든 권리 보유.</p>
+        <p>&copy; 2024 SUK TA BUCK SU. 모든 권리 보유.</p>
     </footer>
 </body>
 </html>

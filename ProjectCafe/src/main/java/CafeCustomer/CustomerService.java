@@ -26,13 +26,13 @@ public class CustomerService {
 	}
 	
 	//회원정보 수정
-	 public void modifyMember(Customer cus) {
-		dao.update(cus);
+	int modifyMember(Customer cus) {
+		return dao.update(cus);
 	 }
 	
 	 //회원탈퇴
-	 public void deleteMember(String id) {
-		 dao.delete(id);
+	int deleteMember(String id) {
+		return dao.delete(id);
 	 }
 	
 	

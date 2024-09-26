@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" type="text/css" href="/ProjectCafe/css/menu.css">
+<link rel="stylesheet" type="text/css" href="/ProjectCafe/css/menuChangeCheck.css">
 
 
 <script>
@@ -58,19 +58,19 @@ function regCheck(){
                 <li><a href="/ProjectCafe/MenuList">메뉴 관리</a></li>
                 <li><a href="/ProjectCafe/cusList">고객 관리</a></li>
                 <li><a href="/ProjectCafe/StoreList">지점 관리</a></li>
-                <li><a href="#">로그인 </a></li>
+                <li><a href="/ProjectCafe/login">로그인 </a></li>
                 <li><a href="/ProjectCafe/signUp">회원가입</a></li>
             </ul>
         </nav>
     </header>
    <main>
-        <section class="menu-list">
-
+        <section class="edit-menu">
+<h2><strong>회원가입</strong></h2>
 
 <form name="form" action="/ProjectCafe/signUp" method="post" onsubmit="return signUpCheck()">
 
-<table>
-<caption> 회원 가입</caption>
+<table  class="menu-table">
+
 
 <tr>
 <th> 아이디 </th> 
@@ -94,7 +94,7 @@ function regCheck(){
 
 <tr> 
 	<td colspan="2"> 
-		<button type="submit">등록</button>
+		<button type="submit">등록</button> 
 		<button type="reset">취소</button>
 	</td>
 	</tr>
@@ -106,7 +106,7 @@ function regCheck(){
 </section>
     </main>
     <footer>
-        <p>&copy; 2024 스타벅스. 모든 권리 보유.</p>
+        <p>&copy; 2024 SUK TA BUCK SU. 모든 권리 보유.</p>
     </footer>
 
 </body>

@@ -164,8 +164,9 @@ public class CustomerDAO {
 				String id_tmp  = rs.getString(1);
 				String name =  rs.getString(2);
 				String tell = rs.getString(3);	
-				String birth = rs.getString(4);	
-				cus = new Customer(id_tmp, name, tell, birth);
+				String birth = rs.getString(4);
+				String point = rs.getString(5);
+				cus = new Customer(id_tmp, name, tell, birth, point);
 			}
 			
 		} catch (SQLException e) {

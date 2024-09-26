@@ -16,15 +16,16 @@
                 <li><a href="/ProjectCafe/MenuList">메뉴 관리</a></li>
                 <li><a href="/ProjectCafe/cusList">고객 관리</a></li>
                 <li><a href="/ProjectCafe/StoreList">지점 관리</a></li>
-                <li><a href="#">로그인 </a></li>
+                <li><a href="/ProjectCafe/login">로그인 </a></li>
                 <li><a href="/ProjectCafe/signUp">회원가입</a></li>
             </ul>
         </nav>
     </header>
+  
   <main>
      <section class="edit-menu">
-<h2 class="table-title" >신메뉴 등록!!</h2>
 
+<h2><strong>신메뉴 등록!!</strong></h2>
 <form name="frm" action="/ProjectCafe/menuReg" method="post">
 <table class = "menu-table">
 
@@ -49,7 +50,7 @@
 </tr>
 
 <tr>
-<td colspan="2"><button>등록</button></td>
+<td colspan="2" class="btn"><button>등록</button></td>
 </tr>
 
 </table>
@@ -57,9 +58,8 @@
         </section>
     </main>
     <footer>
-        <p>&copy; 2024 스타벅스. 모든 권리 보유.</p>
+        <p>&copy; 2024 SUK TA BUCK SU. 모든 권리 보유.</p>
     </footer>
-
 
 </body>
 </html>
