@@ -201,6 +201,33 @@ public class CustomerDAO {
 	}
 	
 	
+	//사용자 인증 메서드 
+	public boolean authenticate(String memberId) {
+		Connection con = dbcon();
+		PreparedStatement pst = null;
+		ResultSet rs = null;
+		boolean isValidUser = false;
+		
+		String sql= "SELECT customer_id FROM customer_tbl4 WHERE customer_id = ?";
+		
+		try {
+			pst = con.prepareStatement(sql);
+			pst.setString(1, memberId);
+			rs = pst.executeQuery();
+			
+			if(rs.next()) {
+				isValidUser = true;	// 사용자 ID 가 존재하면 인증성공
+				
+			}
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return isValidUser;
+	}
+	
 	
 	
 	
