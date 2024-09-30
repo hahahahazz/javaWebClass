@@ -162,7 +162,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="day08" path="/day08" reloadable="true" source="org.eclipse.jst.jee.server:day08"/><Context docBase="day08Ex" path="/day08Ex" reloadable="true" source="org.eclipse.jst.jee.server:day08Ex"/><Context docBase="sessionCart" path="/sessionCart" reloadable="true" source="org.eclipse.jst.jee.server:sessionCart"/><Context docBase="ProjectCafe" path="/ProjectCafe" reloadable="true" source="org.eclipse.jst.jee.server:ProjectCafe"/></Host>
+      <Context docBase="ajaxSample" path="/ajaxSample" reloadable="true" source="org.eclipse.jst.jee.server:ajaxSample"/><Context docBase="AddressPrj" path="/AddressPrj" reloadable="true" source="org.eclipse.jst.jee.server:AddressPrj"/><Context docBase="gallerySample" path="/gallerySample" reloadable="true" source="org.eclipse.jst.jee.server:gallerySample"/><Context docBase="jQuerySample" path="/jQuerySample" reloadable="true" source="org.eclipse.jst.jee.server:jQuerySample"/><Context docBase="ProjectCafe" path="/ProjectCafe" reloadable="true" source="org.eclipse.jst.jee.server:ProjectCafe"/><Context docBase="day09" path="/day09" reloadable="true" source="org.eclipse.jst.jee.server:day09"/><Context docBase="ajaxReview" path="/ajaxReview" reloadable="true" source="org.eclipse.jst.jee.server:ajaxReview"/></Host>
     </Engine>
   </Service>
 </Server>

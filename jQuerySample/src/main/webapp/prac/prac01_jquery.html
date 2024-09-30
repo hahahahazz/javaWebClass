@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js">
+</script>
+
+<script>
+function checkId(){
+	alert("안녕?");
+	
+	//요소선택
+	//속성변경
+	// document.querySelector("#id");  를 jQuery 로 쓰자면
+	let idTag = $("#id");
+	let idValue = idTag.val();	//value 속성 얻어오기
+	alert(idValue);
+	
+	let idValue2 = $("#id").val();
+	alert(idValue2);
+	
+	if(idValue ==""){
+		alert("아이디 입력하시오.");
+	}
+}
+
+</script>
+</head>
+<body>
+아이디<input type="text" id="id">
+<button onclick="checkId()"> 등록 </button>
+
+</body>
+</html>

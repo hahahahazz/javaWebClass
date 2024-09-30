@@ -57,9 +57,10 @@ function regCheck(){
                 <li><a href="/ProjectCafe/main">홈</a></li>
                 <li><a href="/ProjectCafe/MenuList">메뉴 관리</a></li>
                 <li><a href="/ProjectCafe/cusList">고객 관리</a></li>
-                <li><a href="/ProjectCafe/StoreList">지점 관리</a></li>
-                <li><a href="/ProjectCafe/login">로그인 </a></li>
+ 				<li><a href="/ProjectCafe/StoreList">지점 관리</a></li>
+               <!-- <li><a href="/ProjectCafe/login">로그인 </a></li> --> 
                 <li><a href="/ProjectCafe/signUp">회원가입</a></li>
+                <li><a href="/ProjectCafe/logout">로그아웃</a></li>
             </ul>
         </nav>
     </header>

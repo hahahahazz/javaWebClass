@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script>
+//이 코드는 버튼 클릭 시 영화 정보(여기서는 "조커 폴 리 아가 곧 개봉합니다."라는 메시지)를 알림창으로 표시하는 간단한 AJAX 시뮬레이션입니다.
+//실제 서버와의 통신은 포함되어 있지 않지만, AJAX의 기본 구조를 이해하는 데 도움이 됩니다.
+
+//ajax 매서드 만들어보기
+	function hiAjax(obj){	//AJAX 요청을 시뮬레이션하는 함수
+	let type = obj.type;
+	let url = obj.url;
+	let dataType = obj.dataType;
+	//type, url, dataType 을 추출 
+	//movie 라는 변수에 영화정보를 저장 
+	let movie = " 조커 폴 리 아 되 가 곧 개봉합니다."
+	
+	//실제 서버와의 통신을 수행한다.
+	let result =  true;		//result 변수를 true 로 설정하여 요청이 성공한 것으로 가정
+	if(result){	
+		obj.success(movie);	//성공하면 이부분을 호출하여 영화정보를 반환.
+	} else{
+		obj.error();
+	}
+}
+
+
+
+function information(){	//버튼 클릭시 호출되는 함수 
+	alert("안녕하세요.. ┬┴┬┴┤(･_├┬┴┬┴)")
+	hiAjax({	//함수를 호출하여 AJAX 요청을 시뮬레이션 한다
+		type : "get",
+		//url : "pracFood1",
+		success : function(data){
+			alert(data);
+		},
+		error : function (err){
+			alert("실패 다시해보세요.")
+		}
+	});
+}
+
+</script>
+
+</head>
+<body>
+<button onclick="information()"> 영화 정보 </button>
+</body>
+</html>

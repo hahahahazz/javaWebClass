@@ -224,7 +224,7 @@ public class CustomerDAO {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
+		close(con,pst,rs);
 		return isValidUser;
 	}
 	

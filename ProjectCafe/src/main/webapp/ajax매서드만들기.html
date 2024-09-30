@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script>
+function send(){
+	$.ajax(
+			{
+				type: "get",
+				url : "/ProjectCafe/ajaxCafeMenu",
+				success : function(data){
+					alert(data);
+					
+					for(let i =0; i<data.length; i++){
+						let item = data[i];
+						//menu_id, menu_name, menu_price, menu_point
+						let str =`<tr><td> ${item.menu_id}</td><td>  ${ item.menu_name} </td> <td> ${item.menu_price}</td><td> ${item.menu_point}</td></tr>`;	
+						$("#result").append(str);
+					}
+					
+				},
+				error : function(err){
+					alert("요청에 실패 하였습니다.");
+				}
+				
+			}
+			);
+}
+
+</script>
+
+</head>
+<body>
+<button onclick="send()"> 카페 메뉴 정보 </button>
+<table id="result"> </table>
+</body>
+</html>

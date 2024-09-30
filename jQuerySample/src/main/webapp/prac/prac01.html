@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+function checkId(){	//함수는 호출해야 실행된다.
+		//이벤트 핸들러 = 처리자(body 에서 생긴 이벤트를 처리하는 아이) =처리하는 함수
+	//alert("이벤트 발생");
+	//해당 요소 선택 -> 그 요소의 필요한 속성 가져오기(input 은 value ! )	
+	// 값이 잇으면 가져와서 그값을 판단한다
+	//document.getElementById("");	//id 가 "id"인것을 찾아서 나에게 줘 라는 의미  class 는 . 으로 시작
+	let idTag = document.getElementById("");
+	alert(idTag);
+	let idValue = idTag.value;
+	//alert(idValue);
+	
+	if(idValue == ""){
+		alert("아이디 입력하세요");
+	}
+	
+}
+
+</script>
+</head>
+<body>
+
+아이디 <input type="text" id="id">
+<button onclick="checkId()"> 등록 </button>
+<!-- onclick=클릭을 감지하는 듣는(listen) 기능 = 리스너
+ checkId() 핸들러 
+ 버튼 누르면 위 함수가 실행되어라 -->
+</body>
+</html>

@@ -7,6 +7,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
+
 public class CafeMenuDAO {
 	
 	String driver = "oracle.jdbc.driver.OracleDriver";
@@ -197,6 +198,41 @@ public class CafeMenuDAO {
 		}
 		
 		return rRow;
+	}
+	
+
+	public ArrayList<CafeMenu>  getCafeMenuList(){		
+		
+		 Connection con  =dbcon();		 
+		 String sql=" select  * from  menu_tbl ";
+		 ArrayList<CafeMenu> list = new ArrayList<>();
+		 
+		 try {
+			PreparedStatement pst  = con.prepareStatement(sql);
+			ResultSet rs = pst.executeQuery();
+			
+			while( rs.next()){				
+				 String menu_id=rs.getString(1);
+				 String menu_name= rs.getString(2);
+				 String menu_price= rs.getString(3);
+				 String menu_point= rs.getString(4);
+				 
+				 CafeMenu cafeMenu = new CafeMenu(menu_id,menu_name,menu_price,menu_point);
+				 list.add(cafeMenu);						 
+			   	
+			}	
+			rs.close();
+			pst.close();
+			con.close();
+						
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+			
+	 
+		return list;	 
+		
 	}
 	
 	

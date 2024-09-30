@@ -42,12 +42,12 @@ function loginCheck() {
         <h1>SUK TA BUCK SU</h1>
         <nav>
             <ul>
-                <li><a href="/ProjectCafe/main">홈</a></li>
-                <li><a href="/ProjectCafe/MenuList">메뉴 관리</a></li>
-                <li><a href="/ProjectCafe/cusList">고객 관리</a></li>
-                <li><a href="/ProjectCafe/StoreList">지점 관리</a></li>
+                <li><a href="/ProjectCafe/main0">홈</a></li>
+                <li><a href="/ProjectCafe/login">메뉴 관리</a></li>
+                <li><a href="/ProjectCafe/login">고객 관리</a></li>
+                <li><a href="/ProjectCafe/login">지점 관리</a></li>
                 <li><a href="/ProjectCafe/login">로그인 </a></li>
-                <li><a href="/ProjectCafe/signUp">회원가입</a></li>
+                <li><a href="/ProjectCafe/login">회원가입</a></li>
             </ul>
         </nav>
     </header>

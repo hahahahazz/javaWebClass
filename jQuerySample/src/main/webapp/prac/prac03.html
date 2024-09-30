@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+
+function changeCss() {
+	alert("안녕?");
+	let wrapTag = document.querySelector("#wrap");
+	wrapTag.style.color="skyblue";
+}	//잘 되는지 확인해보기
+
+
+
+//동적으로 이벤트리스너 추가하기
+/*
+let div = document.querySelector("#wrap");
+//함수안에 잇는게 아니라서 그냥 실행된다. 
+alert(div);
+*/
+
+//문서의 로드를 감지하는 이벤트 추가하기
+//window.addEventListener("load", 콜백함수);
+//window.addEventListener("load",function(){alert("로드완료");});
+window.addEventListener("load",function(){
+	alert("로드완료");
+
+	let btn = document.querySelector("#btn2");
+	alert(btn);
+	
+//	btn.addEventListener("이벤트 이름", "콜백함수 ");
+	btn.addEventListener("click", function(){
+		alert("클릭 되었다");
+	
+		//
+		document.querySelector("#wrap").style.color="green";
+		
+	});
+	
+	
+	});
+
+
+
+</script>
+</head>
+<body>
+
+
+<div id="wrap"> <h2>css 변경 ༼ つ ◕_◕ ༽つ </h2></div>
+
+<button onclick="changeCss()"> 스타일 변경 1 </button>
+<button id="btn2"> 스타일 변경 2 </button>
+
+
+
+</body>
+</html>
