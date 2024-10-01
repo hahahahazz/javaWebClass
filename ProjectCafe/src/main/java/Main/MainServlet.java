@@ -16,7 +16,7 @@ public class MainServlet extends HttpServlet{
 
 	
 		//req.getRequestDispatcher("WEB-INF/views/main.jsp").forward(req, resp);
-	  req.getRequestDispatcher("WEB-INF/views/main.jsp").forward(req, resp);
+	  req.getRequestDispatcher("WEB-INF/views/main2.jsp").forward(req, resp);
 	
 	
 	}

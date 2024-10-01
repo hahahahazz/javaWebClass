@@ -46,14 +46,12 @@ public class FoodDAO {
 		 try {
 			PreparedStatement pst  = con.prepareStatement(sql);
 			ResultSet rs = pst.executeQuery();
-			
 			while( rs.next()){				
 				 String name=rs.getString(1);
 				 int price= rs.getInt(2);
 				 
 				 Food food = new Food( name, price );
 				 list.add(food);						 
-			   	
 			}	
 			rs.close();
 			pst.close();

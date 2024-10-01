@@ -17,6 +17,8 @@ public class FoodServlet extends HttpServlet{
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
+		//음식메뉴 정보만 제공하는 서블렛 
+		
 		resp.setCharacterEncoding("UTF-8");
 //		resp.setContentType("text/plain;charset=utf-8");
 		resp.setContentType("text/html;charset=utf-8");

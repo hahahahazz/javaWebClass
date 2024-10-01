@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
+<script>
+//이 함수는 특정 데이터(예: 상품 ID와 요청 메시지)를 서버로 전송하고, 그에 대한 응답을 처리하는 기본적인 Ajax 요청 패턴을 보여줍니다.
+function regReview(){
+	let id ="2";
+	let content = "피곤합니다."
+	
+	let sendData ={id : id, content : contetn};
+	//sendData라는 객체를 생성하여 id와 content를 포함시킵니다.
+	console.log(sendData);
+	
+	let sendDatastr = JSON.stringify(sendData);
+	console.log(sendDatastr);
+	//sendData 객체를 JSON 문자열로 변환하여 sendDatastr에 저장하고,
+	// 이를 콘솔에 출력합니다. 이는 Ajax 요청에 필요한 형식입니다.
+	
+	$.ajax({
+		type : "post",
+		url : "/day10/reg2",
+		contentType: "application/json",
+		data : sendDatastr,
+		success : function(data){
+			console.log(data);
+		},
+		error : function(err){
+			console.error(err);
+		}
+	});
+	
+}
+</script>
+</head>
+<body>
+
+<button onclick="regReview()"> 리뷰 등록 </button>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
+<script>
+function regReview(){
+	alert("안녀엉?")
+	
+	//사용자가 입력한 리뷰 내용 가져오기
+	let content = document.querySelector("#review").value;
+	alert(content);
+	
+	let dataValue = {id : "1" , content : content};
+	
+	// 문자열화 시키기
+	console.log(dataValue);
+	
+	//JSON.stringify(dataValue);
+	let dataValueJSON = JSON.stringify(dataValue);
+	console.log(dataValueJSON);
+	
+	//JSON 형식으로
+	
+	//ajax 에서 서버와 통신
+	$.ajax({
+		type : "post",	// HTTP 매서ㄷ,로 post를 사용하여 서버에 데이터를 전송하겠다	
+						// POST는 주로 데이터를 서버에 추가할 때 사용됩니다.
+		url : "/day10/reg2",	//요청을 보낼 URL을 지정합니다. 
+		contentType : "application/json",	//{"id":"1","content":"fffff"} 이 형태 
+			// 요청 본문의 데이터 형식을 설정합니다. 여기서는 JSON 형식으로 데이터를 보내겠다고 명시하고 있습니다.
+			//즉, 서버는 요청을 처리할 때 이 데이터가 JSON 형식임을 알게 됩니다.
+		data: dataValueJSON,	//서버로 전송할 데이터입니다. 이 변수는 JSON 문자열 형태로 되어 있어야 합니다.
+			//dataValueJSON이 {"id":"1","content":"fffff"}와 같은 형태라고 가정할 수 있습니다.
+		success : function(data){ //요청이 성공적으로 완료되었을 때 
+				//서버로부터 응답받은 데이터가 data 매개변수로 전달되며, 여기서 console.log(data)를 통해 응답 데이터를 콘솔에 출력합니다.
+			console.log(data);
+		},
+		error : function(err){
+			console.log(err);
+		}
+	});
+	
+	
+	
+	
+}
+</script>
+</head>
+<body>
+
+<input type="text" id="review">
+<button onclick="regReview()"> 등록 </button>
+
+<!-- 이 코드는 양이 많거나 할떄 문자열의 형태 JSON의 형태로 출력하면깔끔 해지기때문에 사용해본다
+하지만 이방법을 사용하면 getParameter 가 안되서 서블릿에선 바디내용을가져오는 코드가 더필요하다  -->
+</body>
+</html>

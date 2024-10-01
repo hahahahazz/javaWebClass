@@ -7,6 +7,9 @@ import org.json.JSONObject;
 
 public class FoodService {
 
+	//JSON = 자바스크립트에서 객체를 다루는 표현법
+	// 자바스크립트에서 사용할 수 있도록 JSON이라는 형태로 자바객체를 가공하는 표현법
+	
 	FoodDAO dao = new FoodDAO();
 	
 	
@@ -16,7 +19,7 @@ public class FoodService {
 	
 	public JSONArray getMenuListJSON() {
 		
-		//
+		// ArrayList : 메뉴정보가 하나가 아니라 여러개 일 때 제공하는 방법
 		ArrayList<Food> list = new ArrayList<>();
 		list.add(new Food("오므라이스",4000));
 		list.add(new Food("돈까스",8000));

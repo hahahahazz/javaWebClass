@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
+<script>
+function regReview(){
+	let id ="1";
+	let content = "춥습니다."
+	
+	$.ajax({
+		type : "post",
+		url : "/day10/reg1",
+		data : {id : id, content : content},
+		success : function(data){
+			console.log(data);
+		},
+		error : function(err){
+			console.error(err);
+		}
+	});
+	
+}
+</script>
+</head>
+<body>
+
+<button onclick="regReview()"> 리뷰 등록 </button>
+
+</body>
+</html>

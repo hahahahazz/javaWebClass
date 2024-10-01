@@ -4,6 +4,7 @@ public class Food {
 
 	String name;
 	int price;
+	
 	public String getName() {
 		return name;
 	}
@@ -26,7 +27,7 @@ public class Food {
 		this.price = price;
 	}
 	
-	//객체야 너의 정보를 다 가져와줘 
+	//객체야 너의 정보를 다 가져와줘  전체값을 한번에 보기 
 	@Override
 	public String toString() {
 		return "Food [name=" + name + ", price=" + price + "]";

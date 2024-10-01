@@ -11,6 +11,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 //메뉴정보 리스트 제공하기(응답하기)
+
+
 @WebServlet("/pracFood3")
 public class FoodServlet3 extends HttpServlet{
 

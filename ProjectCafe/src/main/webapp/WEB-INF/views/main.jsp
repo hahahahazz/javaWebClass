@@ -12,22 +12,31 @@
 </head>
 
 <body>
-    <header>
-    <img  src="/ProjectCafe/imgs/숙타벅수로고_배경제거.png">
-        <h1>SUK TA BUCK SU</h1>
-        <nav>
-        <%  %>
-            <ul>
-                <li><a href="/ProjectCafe/main">홈</a></li>
-                <li><a href="/ProjectCafe/MenuList">메뉴 관리</a></li>
-                <li><a href="/ProjectCafe/cusList">고객 관리</a></li>
- 				<li><a href="/ProjectCafe/StoreList">지점 관리</a></li>
-               <!-- <li><a href="/ProjectCafe/login">로그인 </a></li> --> 
-                <li><a href="/ProjectCafe/signUp">회원가입</a></li>
-                <li><a href="/ProjectCafe/logout">로그아웃</a></li>
-            </ul>
-        </nav>
-    </header>
+<header>
+  <img  src="/ProjectCafe/imgs/숙타벅수로고_배경제거.png">
+    <h1>SUK TA BUCK SU</h1>
+ <nav>
+   <% String id = (String) session.getAttribute("member_id"); %>
+   <ul>
+        <% if(id == null){ %>
+     <li><a href="/ProjectCafe/main">홈</a></li>
+     <li><a href="/ProjectCafe/login">메뉴 관리</a></li>
+     <li><a href="/ProjectCafe/login">고객 관리</a></li>
+ 	 <li><a href="/ProjectCafe/login">지점 관리</a></li>
+     <li><a href="/ProjectCafe/login">회원가입</a></li>
+     <li><a href="/ProjectCafe/login">로그인 </a></li> 
+   
+        <%} else{ %>
+     <li><a href="/ProjectCafe/main">홈</a></li>
+     <li><a href="/ProjectCafe/MenuList">메뉴 관리</a></li>
+     <li><a href="/ProjectCafe/cusList">고객 관리</a></li>
+ 	 <li><a href="/ProjectCafe/StoreList">지점 관리</a></li>
+     <li><a href="/ProjectCafe/logout">로그아웃</a></li>
+     <li><a href="/ProjectCafe/signUp">회원가입</a></li>
+     	<% } %>
+   </ul>
+  </nav>
+ </header>
     <main>
         <section class="hero">
             <h2>당신의 일상에 특별한 순간을 더하세요</h2>
