@@ -71,8 +71,8 @@ if(eng>=90){
 	}
 } %> <br>
 2. JSTL  <br>
-<c:forEach var="dan" begin="1" end="9">
-	<c:forEach var="i" begin="1" end="9"> ${dan*i } </c:forEach>
+<c:forEach var="i" begin="1" end="9">
+	<c:forEach var="j" begin="1" end="9"> ${i*j } </c:forEach>
 </c:forEach>
 
 
