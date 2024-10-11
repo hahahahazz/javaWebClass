@@ -182,21 +182,16 @@ public class CustomerDAO {
 		int rRow=0;
 		Connection con = dbcon();
 		PreparedStatement pst = null;
-		
 		String sql = "delete from customer_tbl4 where customer_id=?";
-		
-		
 		try {
 			pst = con.prepareStatement(sql);
 			pst.setString(1, id);
 			rRow = pst.executeUpdate();
-			
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		close(pst, con);
-		
 		return rRow;
 	}
 	
