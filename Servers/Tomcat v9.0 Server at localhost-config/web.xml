@@ -4743,5 +4743,26 @@
         <welcome-file>index.htm</welcome-file>
         <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>
+    
+    
+<!-- 페이지가 없는경우 -->
+<error-page>
+   <error-code>404</error-code>
+   <location>/errorHandle2</location>
+</error-page>
+
+<!--서버 오류 -->
+<error-page>
+   <error-code>500</error-code>
+   <location>/errorHandler3</location>
+</error-page>
+
+<!--서버 오류 -->
+<!--
+	<error-page>
+	   <exception-type>java.lang.NullPointerException</exception-type>
+	   <location>/errorHandle</location>
+	</error-page>
+-->
 
 </web-app>
